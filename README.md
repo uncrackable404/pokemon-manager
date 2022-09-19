@@ -19,7 +19,7 @@ The web app is created with Symfony and React as described in the [project docum
 1. Clone repository and go to the project root
 2. Make sure that the above ports are free or edit the `docker-compose.yml` file and the `.env` files if you want to change the ports.
 3. Start the project the first time with this command: `make start`
-4. Visit the web app: ()
+4. Visit the web app: http://localhost:3000
 
 ### Main commands
 - Reactive containers: `make up`
