@@ -18,7 +18,7 @@ migrate:
 
 migrate-fresh:
 	docker-compose run backend php bin/console doctrine:schema:drop --full-database --force
-	docker-compose run backend php bin/console doctrine:migrations:migrate
+	docker-compose run backend php bin/console doctrine:migrations:migrate --no-interaction
 
 import:
 	docker-compose run backend php bin/console app:import-pokemons
