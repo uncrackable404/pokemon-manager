@@ -1,5 +1,5 @@
-restart: stop kill up install migrate-fresh import
-start: up install migrate-fresh import
+restart: stop kill up install migrate-fresh
+start: up install migrate-fresh
 
 stop:
 	docker-compose stop
