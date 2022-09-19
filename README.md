@@ -8,16 +8,16 @@ The web app is created with Symfony and React as described in the [project docum
 
 ### Services exposed
 
-| Service | Port | Notes             |
-|---------|------|-------------------|
-| Nginx   | 8080 | Access to API     |
-| MySQL   | 4306 |                   |
-| React   | 8000 | Access to Web App |
-| PHP     | 9000 |                   |
+| Service | Port | Notes                                              |
+|---------|------|----------------------------------------------------|
+| Nginx   | 8080 | Access to API: http://localhost:8080/api           |
+| MySQL   | 4306 |                                                    |
+| React   | 8000 | Access to Web App: http://localhost:8000 |
+| PHP     | 9000 |                                                    |
 
 ### How to start project
 1. Clone repository and go to the project root
-2. Make sure that the above ports are free or modify the `docker-compose.yml` file and the `.env` files
+2. Make sure that the above ports are free or edit the `docker-compose.yml` file and the `.env` files if you want to change the ports.
 3. Start the project the first time with this command: `make start`
 
 ### Main commands
