@@ -21,7 +21,9 @@ services:
     ports:
       - '3000:3000'
     volumes:
+      - /var/www/pokemon-manager-frontend/node_modules
       - ./frontend:/var/www/pokemon-manager-frontend
+    stdin_open: true
   backend:
     container_name: backend
     build:

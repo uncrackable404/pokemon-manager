@@ -31,7 +31,7 @@ export default class CreateTeam extends React.Component {
         });
 
         promise.then(response => {
-            window.location = '/team/' + response.data.id + '/edit'
+            window.location = '/team/' + response.data.data.id + '/edit'
         });
     }
 
