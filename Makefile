@@ -1,0 +1,27 @@
+restart: stop up install migrate-fresh import
+start: up install migrate-fresh import
+
+stop:
+	docker-compose stop
+
+kill:
+	docker-compose kill
+
+up:
+	docker-compose up -d --build
+
+install:
+	docker-compose run backend composer install
+
+migrate:
+	docker-compose run backend php bin/console doctrine:migrations:migrate
+
+migrate-fresh:
+	docker-compose run backend php bin/console doctrine:schema:drop --full-database --force
+	docker-compose run backend php bin/console doctrine:migrations:migrate
+
+import:
+	docker-compose run backend php bin/console app:import-pokemons
+
+routes:
+	docker-compose run backend php bin/console debug:router
