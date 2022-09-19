@@ -1,4 +1,4 @@
-restart: stop kill up install migrate-fresh
+restart: stop up install migrate-fresh
 start: up install migrate-fresh
 
 stop:
@@ -6,6 +6,7 @@ stop:
 
 kill:
 	docker-compose kill
+	docker builder prune
 
 up:
 	docker-compose up -d --build
