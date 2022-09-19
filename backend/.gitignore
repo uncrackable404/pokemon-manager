@@ -9,3 +9,4 @@
 /vendor/
 ###< symfony/framework-bundle ###
 /storage/pokemons
+.DS_Store
