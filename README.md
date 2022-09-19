@@ -8,12 +8,12 @@ The web app is created with Symfony and React as described in the [project docum
 
 ### Services exposed
 
-| Service | Port | Notes                                              |
-|---------|------|----------------------------------------------------|
-| Nginx   | 8080 | Access to API: http://localhost:8080/api           |
-| MySQL   | 4306 |                                                    |
+| Service | Port | Notes                                             |
+|---------|------|---------------------------------------------------|
+| Nginx   | 8080 | Access to API: http://localhost:8080           |
+| MySQL   | 4306 |                                                   |
 | React   | 8000 | Access to Web App: http://localhost:8000 |
-| PHP     | 9000 |                                                    |
+| PHP     | 9000 |                                                   |
 
 ### How to start project
 1. Clone repository and go to the project root
