@@ -29,7 +29,7 @@ services:
     build:
       context: backend
     ports:
-      - '9000:9000'
+      - '9008:9008'
     volumes:
       - ./backend:/var/www/pokemon-manager-backend
     depends_on:
