@@ -26,7 +26,7 @@ The web app is created with Symfony and React as described in the [project docum
 - Start first time containers: `make start`
 - Restart containers: `make restart`
 - Stop containers: `make stop`
-- Kill containers: `make kill`
+- Clear containers: `make clear`
 
 ### Other commands
 - Only install Symfony dependencies: `make install`

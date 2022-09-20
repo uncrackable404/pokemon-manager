@@ -1,12 +1,12 @@
-restart: stop up install migrate-fresh
+restart: clear up install migrate-fresh
 start: up install migrate-fresh
 
 stop:
 	docker-compose stop
 
-kill:
+clear:
 	docker-compose kill
-	docker builder prune
+	docker container prune --force
 
 up:
 	docker-compose up -d --build
