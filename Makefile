@@ -12,18 +12,18 @@ up:
 	docker-compose up -d --build
 
 install:
-	docker-compose run backend composer install
+	docker-compose exec backend composer install
 
 migrate:
-	docker-compose run backend php bin/console doctrine:migrations:migrate
+	docker-compose exec backend php bin/console doctrine:migrations:migrate
 
 migrate-fresh:
-	docker-compose run backend php bin/console doctrine:schema:drop --full-database --force
-	docker-compose run backend php bin/console doctrine:migrations:migrate --no-interaction
-	docker-compose run backend php bin/console app:import-pokemons
+	docker-compose exec backend php bin/console doctrine:schema:drop --full-database --force
+	docker-compose exec backend php bin/console doctrine:migrations:migrate --no-interaction
+	docker-compose exec backend php bin/console app:import-pokemons
 
 import:
-	docker-compose run backend php bin/console app:import-pokemons
+	docker-compose exec backend php bin/console app:import-pokemons
 
 routes:
-	docker-compose run backend php bin/console debug:router
+	docker-compose exec backend php bin/console debug:router

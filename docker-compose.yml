@@ -13,7 +13,7 @@ services:
     ports:
       - '4306:3306'
     volumes:
-      - ./mysql:/var/lib/mysql
+      - ./mysql:/var/lib/mysql:cached
   frontend:
     container_name: frontend
     build:
@@ -24,6 +24,8 @@ services:
       - /var/www/pokemon-manager-frontend/node_modules
       - ./frontend:/var/www/pokemon-manager-frontend
     stdin_open: true
+    depends_on:
+      - backend
   backend:
     container_name: backend
     build:
@@ -31,6 +33,7 @@ services:
     ports:
       - '9008:9008'
     volumes:
+      - /var/www/pokemon-manager-backend/vendor
       - ./backend:/var/www/pokemon-manager-backend
     depends_on:
       - database
