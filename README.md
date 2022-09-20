@@ -13,7 +13,7 @@ The web app is created with Symfony and React as described in the [project docum
 | Nginx   | 8080 | Access to API: http://localhost:8080     |
 | MySQL   | 4306 |                                          |
 | React   | 3000 | Access to Web App: http://localhost:3000 |
-| PHP     | 9000 |                                          |
+| PHP     | 9008 |                                          |
 
 ### How to start project
 1. Clone repository and go to the project root
@@ -23,17 +23,17 @@ The web app is created with Symfony and React as described in the [project docum
 
 ### Main commands
 - Reactive containers: `make up`
-- Start first time containers: `make start`
-- Restart containers: `make restart`
 - Stop containers: `make stop`
-- Clear containers: `make clear`
+- Exec new migrations: `make migrate`
+- Show available routes: `make routes`
+- Import data from PokeApi: `make import`
 
 ### Other commands
-- Only install Symfony dependencies: `make install`
-- Exec new migrations: `make migrate`
+- Recreate containers: `make start`
+- Clear and recreate containers: `make restart`
+- Clear containers: `make clear`
 - Refresh database and exec all migrations: `make migrate-fresh`
-- Import data from PokeApi: `make import`
-- Show available routes: `make routes`
+- Install Symfony dependencies: `make install`
 
 ### TODOs
 - Bugs Fix
